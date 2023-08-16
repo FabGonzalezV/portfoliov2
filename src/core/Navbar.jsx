@@ -50,7 +50,7 @@ export default function Navbar() {
                             <img src={process.env.PUBLIC_URL + '/assets/icons/logo.png'} alt="logo-brand" />
                         </div>
                         <div className="slogan">
-                            <span className="white-text ft-w-1">
+                            <span className="white-text ft-16 ft-w-1">
                                 Nuestro código, tu solución
                             </span>
                         </div>

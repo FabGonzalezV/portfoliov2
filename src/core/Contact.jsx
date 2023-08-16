@@ -65,6 +65,7 @@ export function ContactForm() {
                         <input
                             type="text"
                             id="name"
+                            required
                             value={name}
                             onChange={handleNameChange}
                         />
@@ -75,12 +76,14 @@ export function ContactForm() {
                             type="email"
                             id="email"
                             value={email}
+                            required
                             onChange={handleEmailChange}
                         />
                     </div>
                     <div className="input-container">
                         <label htmlFor="message">Mensaje:</label>
                         <textarea
+                        required
                             id="message"
                             value={message}
                             onChange={handleMessageChange}

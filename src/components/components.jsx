@@ -50,9 +50,9 @@ export function Tabs({ expanded, setExpandedTabs }) {
                 <Link className=' blue-text ft-w-2 link' onClick={() => { handlePage("proyectos") }}>Proyectos</Link >
             </div>
 
-            
+
             <div>
-                <Link className=' blue-text ft-w-2 link'to={"/about"}>Sobre mí</Link>
+                <Link className=' blue-text ft-w-2 link' to={"/about"}>Sobre mí</Link>
             </div>
             <div>
                 <Link className='  blue-text ft-w-2 link' onClick={() => { handlePage("contact") }}>Contacto</Link>
@@ -66,7 +66,7 @@ export function Social() {
     return (
         <div id='social' className="lt-links-container">
             <div className='container-5gap'>
-                <a className='container-5gap' href="" >
+                <a className='container-5gap' href="/contact" >
                     <img src={process.env.PUBLIC_URL + "/assets/icons/envelope.svg"} alt="mail-icon" />
                     <span className='white-text ft-16'>
                         codefabsdev@gmail.com
@@ -74,18 +74,18 @@ export function Social() {
                 </a>
             </div>
             <div className='container-5gap'>
-                <a className='container-5gap' href="">
-                    <img src={process.env.PUBLIC_URL + "/assets/icons/phone.svg"} alt="mail-icon" />
-                    <span className='white-text ft-16'>
-                        6146964159
-                    </span>
-                </a>
+
+                <img src={process.env.PUBLIC_URL + "/assets/icons/phone.svg"} alt="mail-icon" />
+                <span className='white-text ft-16'>
+                    6146964159
+                </span>
+
             </div>
             <div className="container-10gap mb">
 
                 <div className='container-5gap'>
 
-                    <a href="http://" className='light-text ft-16'>
+                    <a href="https://github.com/FabGonzalezV" className='light-text ft-16'>
                         <img src={process.env.PUBLIC_URL + "/assets/icons/github.png"} alt="github-icon" />
                     </a>
                 </div>
@@ -97,7 +97,7 @@ export function Social() {
                 </div>
                 <div className='container-5gap'>
 
-                    <a className='light-text ft-16' href="http://">
+                    <a className='light-text ft-16' href="https://www.tiktok.com/@codefabs_?is_from_webapp=1&sender_device=pc">
                         <img src={process.env.PUBLIC_URL + "/assets/icons/tiktok.png"} alt="tiktok-icon" />
                     </a>
                 </div>
@@ -116,7 +116,28 @@ export function AsideBar({ page, setPage }) {
         softSkill: false,
         softHard: false,
         proyecto1_back: false,
-        proyecto1_front: false
+        proyecto2_back: false,
+        proyecto3_back: false,
+        proyecto4_back: false,
+        proyecto5_back: false,
+        proyecto6_back: false,
+        proyecto7_back: false,
+        proyecto8_back: false,
+        proyecto9_back: false,
+        proyecto10_back: false,
+        proyecto11_back: false,
+        proyecto12_back: false,
+        proyecto2_front: false,
+        proyecto3_front: false,
+        proyecto4_front: false,
+        proyecto5_front: false,
+        proyecto6_front: false,
+        proyecto7_front: false,
+        proyecto8_front: false,
+        proyecto9_front: false,
+        proyecto10_front: false,
+        proyecto11_front: false,
+        proyecto12_front: false,
     });
     const [expanded, setExpanded] = useState({
         backendSection: false,
@@ -126,7 +147,30 @@ export function AsideBar({ page, setPage }) {
         softSkill: false,
         softHard: false,
         proyecto1_back: false,
+        proyecto2_back: false,
+        proyecto3_back: false,
+        proyecto4_back: false,
+        proyecto5_back: false,
+        proyecto6_back: false,
+        proyecto7_back: false,
+        proyecto8_back: false,
+        proyecto9_back: false,
+        proyecto10_back: false,
+        proyecto11_back: false,
+        proyecto12_back: false,
         proyecto1_front: false,
+
+        proyecto2_front: false,
+        proyecto3_front: false,
+        proyecto4_front: false,
+        proyecto5_front: false,
+        proyecto6_front: false,
+        proyecto7_front: false,
+        proyecto8_front: false,
+        proyecto9_front: false,
+        proyecto10_front: false,
+        proyecto11_front: false,
+        proyecto12_front: false,
         proyecto1_ux: false
 
     });
@@ -144,9 +188,9 @@ export function AsideBar({ page, setPage }) {
     }
     const handlePage = (p) => {
 
-        
-            setPage(p)
-        
+
+        setPage(p)
+
 
     }
     return (
@@ -154,6 +198,27 @@ export function AsideBar({ page, setPage }) {
             <div className='aside-block'>
                 <div className="aside-block-scroll">
                     <div className="aside-topics-container">
+                        <div id="sub-bar">
+                            <div className='section-flex'  >
+                                <a href="/">
+                                    <h3 id='inicio' className='blue-text mb' >Inicio</h3>
+                                </a>
+                                <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                            </div>
+                            <div className='section-flex'  >
+                                <a href="/proyectos">
+                                    <h3 id='proyectos' className='blue-text mb' >Proyectos</h3>
+                                </a>
+                                <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                            </div>
+                            <div className='section-flex'  >
+                                <a href="/contact">
+                                    <h3 id='contacto' className='blue-text mb' >contacto</h3>
+                                </a>
+                                <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                            </div>
+
+                        </div>
                         <div>
                             <div className='section-flex' onClick={() => { handleClickSection('backendSection'); handleRotateIcon('backendSection'); handlePage("backend-content") }}>
                                 <h3 id='backend' className='blue-text mb' >Backend</h3>
@@ -163,14 +228,203 @@ export function AsideBar({ page, setPage }) {
                                 expanded.backendSection && (
                                     <div>
                                         <div className='section-flex' onClick={() => { handleClickSection('proyecto1_back'); handleRotateIcon('proyecto1_back') }}>
-                                            <h4 className='blue-text-secondary mx mt mb'>proyecto 1</h4>
+                                            <h4 className='blue-text-secondary mx mt mb'>Curso Python</h4>
                                             <img className={`${rotated.proyecto1_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
                                         </div>
                                         {
                                             expanded.proyecto1_back && (
                                                 <div>
                                                     <div>
-                                                        <a className='mx-1 blue-text-tertiaty' href="">Documentación</a>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/CursoIntroPython">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto2_back'); handleRotateIcon('proyecto2_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Generador de Imagenes</h4>
+                                            <img className={`${rotated.proyecto2_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto2_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/image-generator">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto3_back'); handleRotateIcon('proyecto3_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Generador de Coordenadas</h4>
+                                            <img className={`${rotated.proyecto3_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto3_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/random-coordinates-generator-">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto4_back'); handleRotateIcon('proyecto4_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>TSP</h4>
+                                            <img className={`${rotated.proyecto4_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto4_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/Travel-Salesman-Problem">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto5_back'); handleRotateIcon('proyecto5_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Twitter Deep-Learning</h4>
+                                            <img className={`${rotated.proyecto5_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto5_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/Tweets-Classifier/tree/main">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto6_back'); handleRotateIcon('proyecto6_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>PDI</h4>
+                                            <img className={`${rotated.proyecto6_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto6_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/digital-image-processing-and-analysis/tree/main">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto7_back'); handleRotateIcon('proyecto7_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Sistema de Notas</h4>
+                                            <img className={`${rotated.proyecto7_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto7_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/system-of-notes">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto8_back'); handleRotateIcon('proyecto8_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Pokedex</h4>
+                                            <img className={`${rotated.proyecto8_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto8_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/pokedex">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto9_back'); handleRotateIcon('proyecto9_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>ChatBot</h4>
+                                            <img className={`${rotated.proyecto9_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto9_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/chatbot">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto10_back'); handleRotateIcon('proyecto10_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Sistema de Gimnasio</h4>
+                                            <img className={`${rotated.proyecto10_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto10_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/gym-system">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto11_back'); handleRotateIcon('proyecto11_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Agente Inteligente</h4>
+                                            <img className={`${rotated.proyecto11_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto11_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/vacuum-cleaner">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto12_back'); handleRotateIcon('proyecto12_back') }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Laberinto</h4>
+                                            <img className={`${rotated.proyecto12_back ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto12_back && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/A--algorithm">Documentación</a>
 
                                                     </div>
 
@@ -179,6 +433,7 @@ export function AsideBar({ page, setPage }) {
                                             )
                                         }
                                     </div>
+
                                 )
                             }
                             <hr />
@@ -193,14 +448,15 @@ export function AsideBar({ page, setPage }) {
                                 expanded.frontendSection && (
                                     <div>
                                         <div className='section-flex' onClick={() => { handleClickSection('proyecto1_front'); handleRotateIcon('proyecto1_front'); }}>
-                                            <h4 className='blue-text-secondary mx mt mb'>proyecto 1</h4>
+                                            <h4 className='blue-text-secondary mx mt mb'>Frontend-Mission</h4>
                                             <img className={`${rotated.proyecto1_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
                                         </div>
                                         {
                                             expanded.proyecto1_front && (
                                                 <div>
                                                     <div>
-                                                        <a className='mx-1 blue-text-tertiaty' href="">Documentación</a>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/FrontEnd-Mision">Documentación</a>
 
                                                     </div>
 
@@ -208,6 +464,177 @@ export function AsideBar({ page, setPage }) {
                                                 </div>
                                             )
                                         }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto2_front'); handleRotateIcon('proyecto2_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Pokedex</h4>
+                                            <img className={`${rotated.proyecto2_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto2_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/pokedex">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto3_front'); handleRotateIcon('proyecto3_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Mirror</h4>
+                                            <img className={`${rotated.proyecto3_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto3_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/kata-css-mirror">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto4_front'); handleRotateIcon('proyecto4_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Pasteleria</h4>
+                                            <img className={`${rotated.proyecto4_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto4_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/Frontend-intro-HTML">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto5_front'); handleRotateIcon('proyecto5_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Sistema de Notas</h4>
+                                            <img className={`${rotated.proyecto5_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto5_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/system-of-notes">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto6_front'); handleRotateIcon('proyecto6_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Prácticas React</h4>
+                                            <img className={`${rotated.proyecto6_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto6_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/react-practices">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto7_front'); handleRotateIcon('proyecto7_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>ChatBot</h4>
+                                            <img className={`${rotated.proyecto7_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto7_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/chatbot">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto8_front'); handleRotateIcon('proyecto8_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>PDI</h4>
+                                            <img className={`${rotated.proyecto8_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto8_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/digital-image-processing-and-analysis">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto9_front'); handleRotateIcon('proyecto9_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Sistema de Gimnasio</h4>
+                                            <img className={`${rotated.proyecto9_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto9_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/gym-system">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                         <div className='section-flex' onClick={() => { handleClickSection('proyecto10_front'); handleRotateIcon('proyecto10_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Sistema de Gimnasio</h4>
+                                            <img className={`${rotated.proyecto10_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto10_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/vacuum-cleaner">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+                                         <div className='section-flex' onClick={() => { handleClickSection('proyecto11_front'); handleRotateIcon('proyecto11_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Laberinto</h4>
+                                            <img className={`${rotated.proyecto11_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                                        </div>
+                                        {
+                                            expanded.proyecto11_front && (
+                                                <div>
+                                                    <div>
+                                                        <a className='mx-1 blue-text-tertiaty'
+                                                            href="https://github.com/FabGonzalezV/A--algorithm">Documentación</a>
+
+                                                    </div>
+
+
+                                                </div>
+                                            )
+                                        }
+
                                     </div>
                                 )
                             }
@@ -224,14 +651,17 @@ export function AsideBar({ page, setPage }) {
                                 expanded.uxSection && (
                                     <div>
                                         <div onClick={() => handleClickSection('proyecto1_ux')}>
-                                            <h4 className='blue-text-secondary mx mt mb'>proyecto 1</h4>
+                                            <a className='mx-1 blue-text-tertiaty' href="https://github.com/FabGonzalezV/UI-UX/blob/main/Estudio%20contextual.pdf">
+                                                <h4 className='blue-text-secondary mx mt mb'>Estudio Contextual</h4>
+                                            </a>
+
 
                                         </div>
                                         {
                                             expanded.proyecto1_ux && (
                                                 <div>
                                                     <div>
-                                                        <a className='mx-1 blue-text-tertiaty' href="">Documentación</a>
+                                                        <a className='mx-1 blue-text-tertiaty' href="https://github.com/FabGonzalezV/UI-UX/blob/main/Estudio%20contextual.pdf">Documentación</a>
 
                                                     </div>
 
@@ -275,7 +705,8 @@ export function AsideBar({ page, setPage }) {
     )
 }
 
-export function Card({ title, subtitle, children }) {
+export function Card({ title, subtitle, path, children }) {
+    console.log(path)
     return (
 
         <>
@@ -292,12 +723,12 @@ export function Card({ title, subtitle, children }) {
                     </div>
                 </div>
                 <div className='card-body'>
-                    <img src={process.env.PUBLIC_URL + "/assets/images/cards/webpack1.png"} alt="image_project" />
+                    <img src={process.env.PUBLIC_URL + `/assets/images/cards/${path}`} alt="image_project" />
                 </div>
 
                 <div className="card-footer">
                     <p className='ft-14'>
-                        un pequeño portafolio web implementado en react
+                        {children}
                     </p>
                     <Button background={"bg-blue"}>ver</Button>
                 </div>

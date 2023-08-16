@@ -2,9 +2,10 @@ import Navbar from "./Navbar"
 import "./../css/styles.css"
 import { Button } from "../components/components"
 export function About() {
-    const handleClick = ()=>{
+    const handleClick = () => {
         window.location.href = "/proyectos";
     }
+
     return (
         <>
             <Navbar />
@@ -84,9 +85,11 @@ export function About() {
                                 Por otro lado, deseo continuar con la preparación a nivel universitario y contribuir a la comunidad.
                             </p>
                         </section>
+                        <div onClick={handleClick}>
+                            <Button background="bg-green" >Siguiente  &gt;  </Button>
+                        </div>
 
-                        <Button background="bg-green" onClick={handleClick}>Siguiente  &gt;  </Button>
-                         
+
 
                     </div>
 

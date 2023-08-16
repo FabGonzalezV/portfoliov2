@@ -11,10 +11,10 @@ export default function MainPage({ p }) {
     const location = useLocation();
 
     // Rutas en las que quieres mostrar el aside bar
-    const allowedRoutes = ['/proyectos','/proyectos#skills' ];
+    const allowedRoutes = ['/proyectos', '/proyectos#skills'];
     const showAsideBar = allowedRoutes.includes(location.pathname);
 
-   
+
     console.log(location.pathname)
     return (
         <>
@@ -27,9 +27,9 @@ export default function MainPage({ p }) {
                             <AsideBar page={page} setPage={setPage} />
                         </aside>
                     )} */}
-                    <aside id="aside-bar">
-                            <AsideBar page={page} setPage={setPage} />
-                        </aside>
+                <aside id="aside-bar">
+                    <AsideBar page={page} setPage={setPage} />
+                </aside>
                 <aside id="main-content-aside" className="aside-content">
 
                     {
@@ -40,23 +40,45 @@ export default function MainPage({ p }) {
                                     <h1 className="white-text mt">Proyectos Backend</h1>
                                     <div className="main-info-page">
 
-
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
-                                        </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
-                                        </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
-                                        </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
-                                        </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
+                                        <Card title={"Curso Python"} subtitle={"py"} path={"curso_python.png"} >
+                                            Curso python por Innovaccion Virtual
                                         </Card>
 
+                                        <Card title={"Generador de imagenes"} subtitle={"HTML5, CSS, js"} path={"dali.png"} >
+                                            Generador de imagenes mediante la api de openai-dalli
+                                        </Card>
+
+                                        <Card title={"Coordenadas"} subtitle={"lenguaje C"} path={"random.png"} >
+                                            Generador de coordenadas para algoritmo metaheurístico
+                                        </Card>
+                                        <Card title={"TSP"} subtitle={"HTML5,CSS, js, node"} path={"tsp.png"} >
+                                            Algoritmo metaheurístico recocido simulado para resolver tsp
+                                        </Card>
+                                        <Card title={"Twitter deep-learning"} subtitle={"pyton, codelab"} path={"twitter.png"} >
+                                            Algortimo de deep-learning para análisis de tweets falsos
+                                        </Card>
+
+                                        <Card title={"PDI"} subtitle={"HTML5, ejs, js, node"} path={"pdi.png"} >
+                                            Sistema de procesamiento de imagenes fullstack
+                                        </Card>
+                                        <Card title={"Sistema de Notas"} subtitle={"Bootstrap, HTML5, ejs, js"} path={"notes.png"} >
+                                            Sistema de registro de notas fullstack
+                                        </Card>
+                                        <Card title={"Pokedex"} subtitle={"CSS, HTML5, js"} path={"pokedex.png"} >
+                                            Consumo de api pokedex, implementación front y back.
+                                        </Card>
+                                        <Card title={"Chat Bot "} subtitle={"HTML5, ejs, js, node"} path={"chatbot.png"} >
+                                            Chatbot fullstack usando la api de openai(chat-gpt-3.5)
+                                        </Card>
+                                        <Card title={"Sistema Gimnasio"} subtitle={"HTML5, ejs, js, node"} path={"gym.png"} >
+                                            Sistema de registro para gimnasio fullstack
+                                        </Card>
+                                        <Card title={"Agente Inteligente"} subtitle={"HTML5, CSS, JS"} path={"aspiradora.png"} >
+                                            Agente inteligente fullstack con algoritmo de busqueda
+                                        </Card>
+                                        <Card title={"Laberinto"} subtitle={"HTML5, CSS, JS"} path={"A_.png"} >
+                                            Validador de laberintos con algoritmo A estrella
+                                        </Card>
                                     </div>
                                 </div>
                             </>
@@ -70,18 +92,41 @@ export default function MainPage({ p }) {
                                 <div>
                                     <h1 className="white-text mt">Proyectos Frontend</h1>
                                     <div className="main-info-page">
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
+                                        <Card title={"Frontend-Mission"} subtitle={"HTML5, CSS, JS"} path={"frontend_mision.png"} >
+                                            Curso Frontend por inovaccion virtual
                                         </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
+                                        <Card title={"Pokedex"} subtitle={"CSS, HTML5, js"} path={"pokedex.png"} >
+                                            Consumo de api pokedex, implementación front y back.
                                         </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
+                                        <Card title={"Mirror"} subtitle={"CSS, HTML5, js"} path={"vacunas.png"} >
+                                            Mirror de página de vacunas
                                         </Card>
-                                        <Card title={"Portfolio"} subtitle={"React, css, html5, js"} >
-                                            portafolio realizado con ...
+                                        <Card title={"Pastelería"} subtitle={"CSS, HTML5, js"} path={"pasteleria.png"} >
+                                            Página de pedidos para pastelería
                                         </Card>
+                                        <Card title={"Sistema de Notas"} subtitle={"Bootstrap, HTML5, ejs, js"} path={"notes.png"} >
+                                            Sistema de registro de notas fullstack
+                                        </Card>
+                                        <Card title={"Prácticas con React"} subtitle={"React, jsx, node"} path={"react.png"} >
+                                            Prácticas con react
+                                        </Card>
+                                        <Card title={"Chat Bot "} subtitle={"HTML5, ejs, js, node"} path={"chatbot.png"} >
+                                            Chatbot fullstack usando la api de openai(chat-gpt-3.5)
+                                        </Card>
+                                        <Card title={"PDI"} subtitle={"HTML5, ejs, js, node"} path={"pdi.png"} >
+                                            Sistema de procesamiento de imagenes fullstack
+                                        </Card>
+                                        <Card title={"Sistema Gimnasio"} subtitle={"HTML5, ejs, js, node"} path={"gym.png"} >
+                                            Sistema de registro para gimnasio fullstack
+                                        </Card>
+
+                                        <Card title={"Agente Inteligente"} subtitle={"HTML5, CSS, JS"} path={"aspiradora.png"} >
+                                            Agente inteligente fullstack con algoritmo de busqueda
+                                        </Card>
+                                        <Card title={"Laberinto"} subtitle={"HTML5, CSS, JS"} path={"A_.png"} >
+                                            Validador de laberintos con algoritmo A estrella
+                                        </Card>
+
 
                                     </div>
                                 </div>
