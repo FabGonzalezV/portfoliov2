@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Portafolio de Desarrollador Web Fullstack
 
-## Available Scripts
+Este repositorio alberga mi portafolio como desarrollador web fullstack. Aquí encontrarás una descripción de las tecnologías y habilidades que poseo, así como una visión general de mi enfoque en el desarrollo web.
 
-In the project directory, you can run:
+## Acerca de Mí
 
-### `npm start`
+Soy un desarrollador web junior. Mi pasión es aprender y explorar constantemente nuevas tecnologías, frameworks y conceptos relacionados con la programación y la informática. Además, disfruto creando contenido educativo, como tutoriales y cápsulas científicas, para compartir conocimientos con la comunidad.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Mis Habilidades y Conocimientos
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Lenguajes de Programación:**
+  - JavaScript
+  - Python
+  - HTML/CSS
+  - Java
+  - entre otros
 
-### `npm test`
+   
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frameworks y Bibliotecas:**
+  - React.js
+  - Node.js
+  - Express.js
+  - Django
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Bases de Datos:**
+  - MongoDB
+  - PostgreSQL
+  - Sequelize
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Herramientas y Tecnologías Adicionales:**
+  - Git/GitHub
+  - Control de Versiones
+  - Despliegue en Plataformas (Heroku, Netlify)
+  - Integración de API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Áreas de Interés:**
+  - Patrones de Diseño de Software
+  - Experiencia de Usuario (UX/UI)
+  - Desarrollo Frontend y Backend
+  - Investigación en Diversas Disciplinas (Arte, Ciencia, etc.)
 
-### `npm run eject`
+## Objetivos Personales
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Mi objetivo personal es convertirme en un excelente desarrollador en múltiples lenguajes de programación y especialidades del desarrollo web. Estoy comprometido con la mejora continua de mis habilidades y conocimientos, y mi visión es contribuir de manera significativa a proyectos innovadores en el mundo de la tecnología.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si deseas saber más sobre mi trabajo o contactarme para oportunidades de colaboración, no dudes en enviarme un correo electrónico a [codefabsdev@gmail.com](mailto:codefabsdev@gmail.com) o visitar mi perfil en [GitHub](https://github.com/FabGonzalezV).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Gracias por visitar mi repositorio!
