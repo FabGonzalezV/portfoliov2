@@ -7,7 +7,7 @@ import "./../css/styles.css"
 export default function Navbar() {
 
     const location = useLocation();
-    const allowedRoutes = ['/proyectos'];
+    const allowedRoutes = ['/portfoliov2/projects'];
     const showAsideBar = allowedRoutes.includes(location.pathname);
     const [expandedTabs, setExpandedTabs] = useState(false);
     const [movilDevice, setMovilDevice] = useState(null);

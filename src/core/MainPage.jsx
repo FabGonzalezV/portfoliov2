@@ -15,7 +15,7 @@ export default function MainPage({ p }) {
     
 
 
-    console.log(location.pathname)
+ 
     return (
         <>
 

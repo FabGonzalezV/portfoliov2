@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
     const handleClick = () => {
         window.location.href = "/about";
-        
+
     }
     return (
         <>
@@ -35,17 +35,17 @@ export default function LandingPage() {
                                     </p>
                                 </div>
                                 <Link to={"/portfoliov2/about"}>
-                                <div className="landing-btn-container" >
-                                    <Button background="bg-green" >Conoce mi experiencia</Button>
-                                </div>
+                                    <div className="landing-btn-container" >
+                                        <Button background="bg-green" >Conoce mi experiencia</Button>
+                                    </div>
                                 </Link>
-                                
+
                             </div>
-                            <Social /> 
+                            <Social />
 
                         </div>
                         <div className='lt-portrait'>
-                            <img src={process.env.PUBLIC_URL + "/assets/images/portrait.png"} alt="profile_image" loading='lazy'/>
+                            <img src={process.env.PUBLIC_URL + "/assets/images/portrait.png"} alt="profile_image" loading='lazy' />
                         </div>
                     </div>
                 </section>
