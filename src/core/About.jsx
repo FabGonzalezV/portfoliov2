@@ -1,6 +1,6 @@
 import Navbar from "./Navbar"
 import "./../css/styles.css"
-import { Button } from "../components/components"
+import { Button , Footer} from "../components/components"
 export function About() {
     const handleClick = () => {
         window.location.href = "/proyectos";
@@ -15,7 +15,7 @@ export function About() {
                     <section className="mb-3 ">
                         <h1 className="white-text mb-3 ">¿Quien soy?</h1>
                         <div className='lt-portrait'>
-                            <img src={process.env.PUBLIC_URL + "/assets/images/portrait.png"} alt="portrait" />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/portrait.png"} alt="profile_img" loading='lazy' />
                         </div>
 
                         <p className="white-text ft-w-1">
@@ -38,7 +38,7 @@ export function About() {
                                 Durante mi carrera y hasta este momento he estado puliendo mis
                                 habilidades en la programación en general, y sobre todo en el desarrllo web.
 
-                                teniendo una travesía por el diseño de bases de datos, UX/UI, frontend y backend.
+                                Teniendo una travesía por el diseño de bases de datos, UX/UI, frontend y backend.
                             </p>
 
                         </section>
@@ -49,7 +49,7 @@ export function About() {
                             <p className="gray-text ft-w-1">
                                 Por mi formación en Ingeniería tengo una inclinación por saber
                                 cómo funcionan las cosas lo cual despierta el interes por el área
-                                matemática de la Computación, los Compiladores, la IA, el Diseño y Analisis de algoritmos.
+                                matemática de la Computación, los Compiladores, la IA, el Diseño y Analisis de Algoritmos.
                             </p>
                         </section>
 
@@ -58,13 +58,15 @@ export function About() {
                                 Otros cursos
                             </h2>
                             <span className="white-text">
-                                Acontinuación algunos de los cursos que he tomado:
+                                A continuación algunos de los cursos que he tomado:
                             </span>
                             <ul className="white-text ft-w-1">
-                                <li className="mb">Desarrollador web fullstack impartido por innovaccion virtual impulsado por microsoft y github education.</li>
-                                <li className="mb">diseño ux/ui impartido por :</li>
-                                <li className="mb"></li>
-                                <li className="mb"></li>
+                                <li className="mb">Desarrollador web fullstack impartido por <strong className="blue-text">Innovaccion virtual </strong>  impulsado por <em className="blue-text-tertiaty">microsoft y github education</em>.</li>
+                                <li className="mb">Diseño UX: experiencia de usuario UX/UI + Figma: <em className="blue-text-tertiaty">Javier Cañas</em></li>
+                                <li className="mb">Desarrollo Web Completo con HTML5, CSS3, JS AJAX, PHP y MySQL impartido por: <em className="blue-text-tertiaty">Juan Pablo de la Torre Valdez</em></li>
+                                <li className="mb">Inteligencia Artificial y Deep Learning desde cero en Python impartido por: <em className="blue-text-tertiaty">Santiago Hernández</em></li>
+                                <li className="mb">Machine Learning y Data Science, curso completo con Python impartido por: <em className="blue-text-tertiaty">Santiago Hernández</em></li>
+                                <li className="mb">Master en JavaScript: Aprender JS, jQuery, Angular, NodeJS. impartido por: <em className="blue-text-tertiaty">Victor Robles</em></li>
                             </ul>
                         </section>
                         <section className="mb-3 ">
@@ -96,6 +98,7 @@ export function About() {
                 </div>
 
             </main>
+            <Footer></Footer>
         </>
     )
 }

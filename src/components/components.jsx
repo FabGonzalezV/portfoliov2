@@ -1,8 +1,8 @@
 
 
 import './../css/styles.css'
-import { Link, useLocation } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 
 export function Button({ type = "card", background, children }) {
@@ -45,7 +45,9 @@ export function Tabs({ expanded, setExpandedTabs }) {
             <div id="close-bar" className="close-icon" onClick={handleClose}>
                 <img src={process.env.PUBLIC_URL + "/assets/icons/window-close.svg"} alt="close-icon" />
             </div>
-
+            <div>
+                <Link className=' blue-text ft-w-2 link' to={"/"}>Inicio</Link>
+            </div>
             <div  >
                 <Link className=' blue-text ft-w-2 link' onClick={() => { handlePage("proyectos") }}>Proyectos</Link >
             </div>
@@ -85,19 +87,19 @@ export function Social() {
 
                 <div className='container-5gap'>
 
-                    <a href="https://github.com/FabGonzalezV" className='light-text ft-16'>
+                    <a href="https://github.com/FabGonzalezV" target='_blank' rel='noreferrer' className='light-text ft-16'>
                         <img src={process.env.PUBLIC_URL + "/assets/icons/github.png"} alt="github-icon" />
                     </a>
                 </div>
                 <div className='container-5gap'>
 
-                    <a className='light-text ft-16' href="http://">
+                    <a className='light-text ft-16' target='_blank' rel='noreferrer' href="http://">
                         <img src={process.env.PUBLIC_URL + "/assets/icons/instagram.png"} alt="instagram-icon" />
                     </a>
                 </div>
                 <div className='container-5gap'>
 
-                    <a className='light-text ft-16' href="https://www.tiktok.com/@codefabs_?is_from_webapp=1&sender_device=pc">
+                    <a className='light-text ft-16' target='_blank' rel='noreferrer' href="https://www.tiktok.com/@codefabs_?is_from_webapp=1&sender_device=pc">
                         <img src={process.env.PUBLIC_URL + "/assets/icons/tiktok.png"} alt="tiktok-icon" />
                     </a>
                 </div>
@@ -127,6 +129,7 @@ export function AsideBar({ page, setPage }) {
         proyecto10_back: false,
         proyecto11_back: false,
         proyecto12_back: false,
+        proyecto1_front: false,
         proyecto2_front: false,
         proyecto3_front: false,
         proyecto4_front: false,
@@ -174,7 +177,7 @@ export function AsideBar({ page, setPage }) {
         proyecto1_ux: false
 
     });
-    const location = useLocation();
+
     const handleRotateIcon = (section) => {
         setRotate((prevState) =>
             ({ ...prevState, [section]: !prevState[section] })
@@ -600,8 +603,8 @@ export function AsideBar({ page, setPage }) {
                                                 </div>
                                             )
                                         }
-                                         <div className='section-flex' onClick={() => { handleClickSection('proyecto10_front'); handleRotateIcon('proyecto10_front'); }}>
-                                            <h4 className='blue-text-secondary mx mt mb'>Sistema de Gimnasio</h4>
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto10_front'); handleRotateIcon('proyecto10_front'); }}>
+                                            <h4 className='blue-text-secondary mx mt mb'>Agente Inteligente</h4>
                                             <img className={`${rotated.proyecto10_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
                                         </div>
                                         {
@@ -617,7 +620,7 @@ export function AsideBar({ page, setPage }) {
                                                 </div>
                                             )
                                         }
-                                         <div className='section-flex' onClick={() => { handleClickSection('proyecto11_front'); handleRotateIcon('proyecto11_front'); }}>
+                                        <div className='section-flex' onClick={() => { handleClickSection('proyecto11_front'); handleRotateIcon('proyecto11_front'); }}>
                                             <h4 className='blue-text-secondary mx mt mb'>Laberinto</h4>
                                             <img className={`${rotated.proyecto11_front ? 'rotated' : ''}`} src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
                                         </div>
@@ -705,7 +708,7 @@ export function AsideBar({ page, setPage }) {
     )
 }
 
-export function Card({ title, subtitle, path, children }) {
+export function Card({ title, subtitle, path, link, children }) {
     console.log(path)
     return (
 
@@ -723,14 +726,16 @@ export function Card({ title, subtitle, path, children }) {
                     </div>
                 </div>
                 <div className='card-body'>
-                    <img src={process.env.PUBLIC_URL + `/assets/images/cards/${path}`} alt="image_project" />
+                    <img src={process.env.PUBLIC_URL + `/assets/images/cards/${path}`} alt="image_project" loading='lazy' />
                 </div>
 
                 <div className="card-footer">
                     <p className='ft-14'>
                         {children}
                     </p>
-                    <Button background={"bg-blue"}>ver</Button>
+                    <a href={link} target='_blank' rel='noopener noreferrer'>
+                        <Button background={"bg-blue"}>ver</Button>
+                    </a>
                 </div>
             </div>
         </>
@@ -764,3 +769,17 @@ export function Chip({ children }) {
 
     );
 }
+
+export function Footer() {
+    return (
+        <footer className="footer">
+            <div className="footer-container">
+
+                <div className="footer-copyright blue-text-secondary">
+                    © {new Date().getFullYear()} Armando Fabián González (codefabs)
+                </div>
+
+            </div>
+        </footer>
+    );
+};

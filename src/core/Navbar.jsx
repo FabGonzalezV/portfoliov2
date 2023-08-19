@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Button, Tabs } from "../components/components";
-import { AsideBar } from '../components/components';
+
 import "./../css/styles.css"
 export default function Navbar() {
 
@@ -28,7 +28,7 @@ export default function Navbar() {
             setMovilDevice(true);
         } else {
             setMovilDevice(false);
-            
+
         }
 
     }
@@ -43,12 +43,14 @@ export default function Navbar() {
             <div className="container-flex px py">
                 <div id="left-side" className="container-20gap">
                     <div id="menu" className="menu-btn" onClick={handlerClickMenu}>
-                        <img src={process.env.PUBLIC_URL + "/assets/icons/bars.svg"} alt="menu-btn" />
+                        <img src={process.env.PUBLIC_URL + "/assets/icons/bars.svg"} alt="menu-btn" loading='lazy'/>
                     </div>
                     <div className="container-5gap">
+                        <a href="/">
                         <div className="logo">
-                            <img src={process.env.PUBLIC_URL + '/assets/icons/logo.png'} alt="logo-brand" />
+                            <img src={process.env.PUBLIC_URL + '/assets/icons/logo.png'} alt="logo-brand" /> 
                         </div>
+                        </a>
                         <div className="slogan">
                             <span className="white-text ft-16 ft-w-1">
                                 Nuestro código, tu solución
@@ -89,7 +91,9 @@ export default function Navbar() {
                     } */}
 
                     <div>
-                        <Button type="download" background="bg-white">Curriculumn</Button>
+                        <a href="/CV-Armando Fabián Fonzález.pdf" download>
+                            <Button type="download" background="bg-white">Curriculumn</Button>
+                        </a>
                     </div>
                 </div>
             </div>

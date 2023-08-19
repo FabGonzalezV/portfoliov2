@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from "./Navbar"
+import { Footer } from '../components/components';
 import "./../css/styles.css"
 import emailjs from 'emailjs-com';
  
@@ -51,7 +52,7 @@ export function ContactForm() {
                 console.error('Error al enviar el correo:', error);
                 alert('Hubo un error al enviar el correo');
             });
-    };
+    }; 
 
     return (
 
@@ -92,6 +93,7 @@ export function ContactForm() {
                     <button onClick={handleSubmit}>Contactar</button>
                 </form>
             </div>
+            <Footer></Footer>
         </>
     );
 };

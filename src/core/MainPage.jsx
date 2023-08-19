@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { AsideBar, Card, Label, Chip } from "../components/components";
+import { AsideBar, Card, Label, Chip, Footer } from "../components/components";
 import Navbar from "./Navbar"
 import { useLocation } from 'react-router-dom';
 import './../css/styles.css'
@@ -10,9 +10,9 @@ export default function MainPage({ p }) {
     const [page, setPage] = useState("backend-content");
     const location = useLocation();
 
-    // Rutas en las que quieres mostrar el aside bar
-    const allowedRoutes = ['/proyectos', '/proyectos#skills'];
-    const showAsideBar = allowedRoutes.includes(location.pathname);
+    
+    
+    
 
 
     console.log(location.pathname)
@@ -40,43 +40,55 @@ export default function MainPage({ p }) {
                                     <h1 className="white-text mt">Proyectos Backend</h1>
                                     <div className="main-info-page">
 
-                                        <Card title={"Curso Python"} subtitle={"py"} path={"curso_python.png"} >
+                                        <Card title={"Curso Python"} subtitle={"py"} path={"curso_python.png"} 
+                                        link={"https://github.com/FabGonzalezV/CursoIntroPython"}>
                                             Curso python por Innovaccion Virtual
                                         </Card>
 
-                                        <Card title={"Generador de imagenes"} subtitle={"HTML5, CSS, js"} path={"dali.png"} >
+                                        <Card title={"Generador de imagenes"} subtitle={"HTML5, CSS, js"} path={"dali.png"}
+                                        link={"https://github.com/FabGonzalezV/image-generator"} >
                                             Generador de imagenes mediante la api de openai-dalli
                                         </Card>
 
-                                        <Card title={"Coordenadas"} subtitle={"lenguaje C"} path={"random.png"} >
+                                        <Card title={"Coordenadas"} subtitle={"lenguaje C"} path={"random.png"}
+                                         link={"https://github.com/FabGonzalezV/random-coordinates-generator-"} >
                                             Generador de coordenadas para algoritmo metaheurístico
                                         </Card>
-                                        <Card title={"TSP"} subtitle={"HTML5,CSS, js, node"} path={"tsp.png"} >
+                                        <Card title={"TSP"} subtitle={"HTML5,CSS, js, node"} path={"tsp.png"} 
+                                        link={"https://github.com/FabGonzalezV/Travel-Salesman-Problem"} >
                                             Algoritmo metaheurístico recocido simulado para resolver tsp
                                         </Card>
-                                        <Card title={"Twitter deep-learning"} subtitle={"pyton, codelab"} path={"twitter.png"} >
+                                        <Card title={"Twitter deep-learning"} subtitle={"pyton, codelab"} path={"twitter.png"}
+                                        link={"https://github.com/FabGonzalezV/Tweets-Classifier/tree/main"} >
                                             Algortimo de deep-learning para análisis de tweets falsos
                                         </Card>
 
-                                        <Card title={"PDI"} subtitle={"HTML5, ejs, js, node"} path={"pdi.png"} >
+                                        <Card title={"PDI"} subtitle={"HTML5, ejs, js, node"} path={"pdi.png"}
+                                         link={"https://github.com/FabGonzalezV/digital-image-processing-and-analysis/tree/main"} >
                                             Sistema de procesamiento de imagenes fullstack
                                         </Card>
-                                        <Card title={"Sistema de Notas"} subtitle={"Bootstrap, HTML5, ejs, js"} path={"notes.png"} >
+                                        <Card title={"Sistema de Notas"} subtitle={"Bootstrap, HTML5, ejs, js"} path={"notes.png"}
+                                        link={"https://github.com/FabGonzalezV/system-of-notes"} >
                                             Sistema de registro de notas fullstack
                                         </Card>
-                                        <Card title={"Pokedex"} subtitle={"CSS, HTML5, js"} path={"pokedex.png"} >
+                                        <Card title={"Pokedex"} subtitle={"CSS, HTML5, js"} path={"pokedex.png"}
+                                         link={"https://github.com/FabGonzalezV/pokedex"}>
                                             Consumo de api pokedex, implementación front y back.
                                         </Card>
-                                        <Card title={"Chat Bot "} subtitle={"HTML5, ejs, js, node"} path={"chatbot.png"} >
+                                        <Card title={"Chat Bot "} subtitle={"HTML5, ejs, js, node"} path={"chatbot.png"} 
+                                        link={"https://github.com/FabGonzalezV/chatbot"}>
                                             Chatbot fullstack usando la api de openai(chat-gpt-3.5)
                                         </Card>
-                                        <Card title={"Sistema Gimnasio"} subtitle={"HTML5, ejs, js, node"} path={"gym.png"} >
+                                        <Card title={"Sistema Gimnasio"} subtitle={"HTML5, ejs, js, node"} path={"gym.png"} 
+                                        link={"https://github.com/FabGonzalezV/gym-system"}>
                                             Sistema de registro para gimnasio fullstack
                                         </Card>
-                                        <Card title={"Agente Inteligente"} subtitle={"HTML5, CSS, JS"} path={"aspiradora.png"} >
+                                        <Card title={"Agente Inteligente"} subtitle={"HTML5, CSS, JS"} path={"aspiradora.png"} 
+                                        link={"https://github.com/FabGonzalezV/vacuum-cleaner"}>
                                             Agente inteligente fullstack con algoritmo de busqueda
                                         </Card>
-                                        <Card title={"Laberinto"} subtitle={"HTML5, CSS, JS"} path={"A_.png"} >
+                                        <Card title={"Laberinto"} subtitle={"HTML5, CSS, JS"} path={"A_.png"}
+                                         link={"https://github.com/FabGonzalezV/A--algorithm"}>
                                             Validador de laberintos con algoritmo A estrella
                                         </Card>
                                     </div>
@@ -92,38 +104,48 @@ export default function MainPage({ p }) {
                                 <div>
                                     <h1 className="white-text mt">Proyectos Frontend</h1>
                                     <div className="main-info-page">
-                                        <Card title={"Frontend-Mission"} subtitle={"HTML5, CSS, JS"} path={"frontend_mision.png"} >
+                                        <Card title={"Frontend-Mission"} subtitle={"HTML5, CSS, JS"} path={"frontend_mision.png"} 
+                                        link={"https://github.com/FabGonzalezV/FrontEnd-Mision"} >
                                             Curso Frontend por inovaccion virtual
                                         </Card>
-                                        <Card title={"Pokedex"} subtitle={"CSS, HTML5, js"} path={"pokedex.png"} >
+                                        <Card title={"Pokedex"} subtitle={"CSS, HTML5, js"} path={"pokedex.png"} 
+                                        link={"https://github.com/FabGonzalezV/pokedex"}>
                                             Consumo de api pokedex, implementación front y back.
                                         </Card>
-                                        <Card title={"Mirror"} subtitle={"CSS, HTML5, js"} path={"vacunas.png"} >
+                                        <Card title={"Mirror"} subtitle={"CSS, HTML5, js"} path={"vacunas.png"}
+                                        link={"https://github.com/FabGonzalezV/kata-css-mirror"} >
                                             Mirror de página de vacunas
                                         </Card>
-                                        <Card title={"Pastelería"} subtitle={"CSS, HTML5, js"} path={"pasteleria.png"} >
+                                        <Card title={"Pastelería"} subtitle={"CSS, HTML5, js"} path={"pasteleria.png"} 
+                                        link={"https://github.com/FabGonzalezV/Frontend-intro-HTML"}>
                                             Página de pedidos para pastelería
                                         </Card>
-                                        <Card title={"Sistema de Notas"} subtitle={"Bootstrap, HTML5, ejs, js"} path={"notes.png"} >
+                                        <Card title={"Sistema de Notas"} subtitle={"Bootstrap, HTML5, ejs, js"} path={"notes.png"} 
+                                        link={"https://github.com/FabGonzalezV/system-of-notes"}>
                                             Sistema de registro de notas fullstack
                                         </Card>
-                                        <Card title={"Prácticas con React"} subtitle={"React, jsx, node"} path={"react.png"} >
+                                        <Card title={"Prácticas con React"} subtitle={"React, jsx, node"} path={"react.png"} 
+                                        link={"https://github.com/FabGonzalezV/react-practices"}>
                                             Prácticas con react
                                         </Card>
-                                        <Card title={"Chat Bot "} subtitle={"HTML5, ejs, js, node"} path={"chatbot.png"} >
+                                        <Card title={"Chat Bot "} subtitle={"HTML5, ejs, js, node"} path={"chatbot.png"}
+                                        link={"https://github.com/FabGonzalezV/chatbot"} >
                                             Chatbot fullstack usando la api de openai(chat-gpt-3.5)
                                         </Card>
                                         <Card title={"PDI"} subtitle={"HTML5, ejs, js, node"} path={"pdi.png"} >
                                             Sistema de procesamiento de imagenes fullstack
                                         </Card>
-                                        <Card title={"Sistema Gimnasio"} subtitle={"HTML5, ejs, js, node"} path={"gym.png"} >
+                                        <Card title={"Sistema Gimnasio"} subtitle={"HTML5, ejs, js, node"} path={"gym.png"}
+                                        link={"https://github.com/FabGonzalezV/digital-image-processing-and-analysis"} >
                                             Sistema de registro para gimnasio fullstack
                                         </Card>
 
-                                        <Card title={"Agente Inteligente"} subtitle={"HTML5, CSS, JS"} path={"aspiradora.png"} >
+                                        <Card title={"Agente Inteligente"} subtitle={"HTML5, CSS, JS"} path={"aspiradora.png"} 
+                                        link={"https://github.com/FabGonzalezV/vacuum-cleaner"}>
                                             Agente inteligente fullstack con algoritmo de busqueda
                                         </Card>
-                                        <Card title={"Laberinto"} subtitle={"HTML5, CSS, JS"} path={"A_.png"} >
+                                        <Card title={"Laberinto"} subtitle={"HTML5, CSS, JS"} path={"A_.png"}
+                                        link={"https://github.com/FabGonzalezV/A--algorithm"} >
                                             Validador de laberintos con algoritmo A estrella
                                         </Card>
 
@@ -156,7 +178,7 @@ export default function MainPage({ p }) {
                             </>
                         )
                     }
-                    {
+                    { 
                         page === "skills-content" && (
                             <>
 
@@ -231,14 +253,16 @@ export default function MainPage({ p }) {
 
                                 </div>
 
-
+                               
 
                             </>
                         )
                     }
-
+   
                 </aside>
+              
             </div>
+         
         </>
 
     )

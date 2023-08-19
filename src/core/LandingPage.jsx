@@ -1,6 +1,6 @@
 import Navbar from "./Navbar"
 import "./../css/styles.css"
-import { Button, Social, AsideBar } from "../components/components";
+import { Button, Social } from "../components/components";
 export default function LandingPage() {
     const handleClick = () => {
         window.location.href = "/about";
@@ -37,11 +37,11 @@ export default function LandingPage() {
                                     <Button background="bg-green" >Conoce mi experiencia</Button>
                                 </div>
                             </div>
-                            <Social />
+                            <Social /> 
 
                         </div>
                         <div className='lt-portrait'>
-                            <img src={process.env.PUBLIC_URL + "/assets/images/portrait.png"} alt="photo" />
+                            <img src={process.env.PUBLIC_URL + "/assets/images/portrait.png"} alt="profile_image" loading='lazy'/>
                         </div>
                     </div>
                 </section>
