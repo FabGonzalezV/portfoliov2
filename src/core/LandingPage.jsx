@@ -1,6 +1,7 @@
 import Navbar from "./Navbar"
 import "./../css/styles.css"
 import { Button, Social } from "../components/components";
+import { Link } from "react-router-dom";
 export default function LandingPage() {
     const handleClick = () => {
         window.location.href = "/about";
@@ -33,9 +34,12 @@ export default function LandingPage() {
                                         ¡estoy listo para formar parte de tu equipo!
                                     </p>
                                 </div>
-                                <div className="landing-btn-container" onClick={handleClick}>
+                                <Link to={"/portfoliov2/about"}>
+                                <div className="landing-btn-container" >
                                     <Button background="bg-green" >Conoce mi experiencia</Button>
                                 </div>
+                                </Link>
+                                
                             </div>
                             <Social /> 
 
