@@ -46,7 +46,7 @@ export function Tabs({ expanded, setExpandedTabs }) {
                 <img src={process.env.PUBLIC_URL + "/assets/icons/window-close.svg"} alt="close-icon" />
             </div>
             <div>
-                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/inicio"}>Inicio</Link>
+                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/"}>Inicio</Link>
             </div>
             <div  >
                 <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/projects"} >Proyectos</Link >
