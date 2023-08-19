@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { AsideBar, Card, Label, Chip, Footer } from "../components/components";
+import { AsideBar, Card, Label, Chip  } from "../components/components";
 import Navbar from "./Navbar"
 import { useLocation } from 'react-router-dom';
 import './../css/styles.css'

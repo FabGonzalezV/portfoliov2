@@ -3,7 +3,7 @@ import "./../css/styles.css"
 import { Button , Footer} from "../components/components"
 export function About() {
     const handleClick = () => {
-        window.location.href = "/proyectos";
+        window.location.href = "/portfoliov2/proyectos";
     }
 
     return (

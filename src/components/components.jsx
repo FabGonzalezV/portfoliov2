@@ -36,7 +36,7 @@ export function Tabs({ expanded, setExpandedTabs }) {
     }
     const handlePage = (p) => {
 
-        window.location.href = `/${p}`;
+        window.location.href = `/portfoliov2/${p}`;
     }
 
     return (
@@ -46,7 +46,7 @@ export function Tabs({ expanded, setExpandedTabs }) {
                 <img src={process.env.PUBLIC_URL + "/assets/icons/window-close.svg"} alt="close-icon" />
             </div>
             <div>
-                <Link className=' blue-text ft-w-2 link' to={"/"}>Inicio</Link>
+                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/"}>Inicio</Link>
             </div>
             <div  >
                 <Link className=' blue-text ft-w-2 link' onClick={() => { handlePage("proyectos") }}>Proyectos</Link >
@@ -54,7 +54,7 @@ export function Tabs({ expanded, setExpandedTabs }) {
 
 
             <div>
-                <Link className=' blue-text ft-w-2 link' to={"/about"}>Sobre mí</Link>
+                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/about"}>Sobre mí</Link>
             </div>
             <div>
                 <Link className='  blue-text ft-w-2 link' onClick={() => { handlePage("contact") }}>Contacto</Link>
