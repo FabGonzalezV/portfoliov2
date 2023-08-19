@@ -1,6 +1,7 @@
 import Navbar from "./Navbar"
 import "./../css/styles.css"
-import { Button , Footer} from "../components/components"
+import { Link } from "react-router-dom"
+import { Button, Footer } from "../components/components"
 export function About() {
     const handleClick = () => {
         window.location.href = "/portfoliov2/proyectos";
@@ -87,9 +88,12 @@ export function About() {
                                 Por otro lado, deseo continuar con la preparación a nivel universitario y contribuir a la comunidad.
                             </p>
                         </section>
-                        <div onClick={handleClick}>
-                            <Button background="bg-green" >Siguiente  &gt;  </Button>
-                        </div>
+                        <Link to={"/portfoliov2/projects"}>
+                            <div >
+                                <Button background="bg-green" >Siguiente  &gt;  </Button>
+                            </div>
+                        </Link>
+
 
 
 

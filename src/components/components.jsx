@@ -46,10 +46,10 @@ export function Tabs({ expanded, setExpandedTabs }) {
                 <img src={process.env.PUBLIC_URL + "/assets/icons/window-close.svg"} alt="close-icon" />
             </div>
             <div>
-                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/"}>Inicio</Link>
+                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/inicio"}>Inicio</Link>
             </div>
             <div  >
-                <Link className=' blue-text ft-w-2 link' onClick={() => { handlePage("proyectos") }}>Proyectos</Link >
+                <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/projects"} >Proyectos</Link >
             </div>
 
 
@@ -57,7 +57,7 @@ export function Tabs({ expanded, setExpandedTabs }) {
                 <Link className=' blue-text ft-w-2 link' to={"/portfoliov2/about"}>Sobre mí</Link>
             </div>
             <div>
-                <Link className='  blue-text ft-w-2 link' onClick={() => { handlePage("contact") }}>Contacto</Link>
+                <Link className='  blue-text ft-w-2 link' to={"/portfoliov2/contact"}>Contacto</Link>
             </div>
 
         </div>
