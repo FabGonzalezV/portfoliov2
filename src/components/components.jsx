@@ -203,21 +203,26 @@ export function AsideBar({ page, setPage }) {
                     <div className="aside-topics-container">
                         <div id="sub-bar">
                             <div className='section-flex'  >
-                                <a href="/">
+                                <Link to={"/portfoliov2/"}>
                                     <h3 id='inicio' className='blue-text mb' >Inicio</h3>
-                                </a>
-                                <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
-                            </div>
+                                </Link>
+{                                <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />}                            </div>
                             <div className='section-flex'  >
-                                <a href="/proyectos">
+                                <Link to={"/portfoliov2/projects"}>
                                     <h3 id='proyectos' className='blue-text mb' >Proyectos</h3>
-                                </a>
+                                </Link>
                                 <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
                             </div>
                             <div className='section-flex'  >
-                                <a href="/contact">
+                                <Link to={"/portfoliov2/about"}>
+                                    <h3 id='proyectos' className='blue-text mb' >Sobre mí</h3>
+                                </Link>
+                                <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
+                            </div>
+                            <div className='section-flex'  >
+                                <Link to={"/portfoliov2/contact"}>
                                     <h3 id='contacto' className='blue-text mb' >contacto</h3>
-                                </a>
+                                </Link>
                                 <img src={process.env.PUBLIC_URL + "/assets/icons/chevron-right.svg"} alt="icon_arrow" />
                             </div>
 
